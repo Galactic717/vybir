@@ -1,0 +1,14 @@
+.venv/
+models/
+research/cache/
+*.safetensors
+*.onnx
+*.onnx.data
+certifier.npz
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+*.log

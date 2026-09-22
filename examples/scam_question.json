@@ -1,0 +1,8 @@
+{
+  "type": "choice",
+  "instructions": "Is this text message legitimate, or is it spam or a scam?",
+  "criteria": {
+    "legitimate": "a normal personal, work or service message",
+    "spam": "unsolicited advertising, a prize or lottery claim, phishing or a scam"
+  }
+}

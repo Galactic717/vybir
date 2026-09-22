@@ -1,0 +1,12 @@
+{
+  "machine": "Intel Core i7-12700H (14 cores), NVIDIA RTX 3060 Laptop 6 GB (driver 566.14), 16 GB RAM, Windows 11",
+  "software": "Python 3.14.5, torch 2.13.0 (+cpu and +cu126), onnxruntime 1.24.4",
+  "model": "convaiinnovations/laya (421M)",
+  "workload": "vybir bench: one short e-mail, one four-option choice question, end to end; 50-question batch for throughput; model load excluded",
+  "rows": [
+    {"backend": "torch", "device": "CPU", "dtype": "float32", "p50_ms": 227.61, "p95_ms": 237.52, "runs": 20, "batch_qps": 5.3},
+    {"backend": "ort", "device": "CPU", "dtype": "float32", "p50_ms": 166.78, "p95_ms": 170.41, "runs": 20, "batch_qps": 6.3},
+    {"backend": "torch", "device": "RTX 3060", "dtype": "float32", "p50_ms": 36.05, "p95_ms": 42.5, "runs": 50, "batch_qps": 67.3},
+    {"backend": "torch", "device": "RTX 3060", "dtype": "float16", "p50_ms": 30.01, "p95_ms": 33.85, "runs": 50, "batch_qps": 169.0}
+  ]
+}
