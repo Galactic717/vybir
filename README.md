@@ -3,6 +3,7 @@
 **Local AI that decides — and knows when it doesn't.**
 
 [![CI](https://github.com/Galactic717/vybir/actions/workflows/ci.yml/badge.svg)](https://github.com/Galactic717/vybir/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Galactic717/vybir)](https://github.com/Galactic717/vybir/releases/latest)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 ![Windows · Linux · macOS](https://img.shields.io/badge/runs%20on-Windows%20·%20Linux%20·%20macOS-2f9e6e.svg)
@@ -235,3 +236,6 @@ Innovations and contributors ([NandhaKishorM/laya](https://github.com/NandhaKish
 Runtime structure, the Laya Snake demo and part of the test suite are adapted from
 [mizorewww/laya-mlx](https://github.com/mizorewww/laya-mlx). vybir is an independent project,
 not an official Convai Innovations release.
+
+Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). If you use vybir in
+research, citation metadata is available in [CITATION.cff](CITATION.cff).

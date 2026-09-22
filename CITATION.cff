@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use vybir in research, please cite this software."
+type: software
+title: "vybir: Local typed decisions with uncertainty guarantees"
+authors:
+  - family-names: "Stepanov"
+    given-names: "Hlib"
+version: 0.1.0
+date-released: 2026-09-22
+license: Apache-2.0
+repository-code: "https://github.com/Galactic717/vybir"
+url: "https://github.com/Galactic717/vybir"
+keywords:
+  - local AI
+  - typed decisions
+  - conformal prediction
+  - uncertainty
+  - Laya
