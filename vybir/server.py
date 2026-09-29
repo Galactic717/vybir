@@ -56,7 +56,7 @@ class PredictBody(BaseModel):
 
 
 class RouteBody(BaseModel):
-    state: object = ""
+    state: str | dict | list | None = ""
     questions: dict | None = None
     model: str | None = None
     task: str | None = None

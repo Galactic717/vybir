@@ -54,10 +54,10 @@ print(f"parity: {agree}/{tot} agree | max dprob={max_dp:.4f} max dnoul={max_dn:.
 one, ones = STATES[0], {"d": {"type": "choice", "instructions": "Who handles this?",
                               "criteria": ["billing", "technical", "sales"]}}
 for ag, tag in ((base, "fp32"), (q8, "int8")):
-    for _ in range(2):
+    for _rep in range(2):
         ag.predict(one, ones)
     ts = []
-    for _ in range(10):
+    for _rep in range(10):
         t = time.perf_counter()
         ag.predict(one, ones)
         ts.append((time.perf_counter() - t) * 1000)
@@ -74,7 +74,7 @@ for ag, tag in ((base, "fp32"), (q8, "int8")):
 cached = vybir.load("convaiinnovations/laya", device="cpu", dtype="float32",
                    quantize="int8", result_cache_size=512)
 t = time.perf_counter()
-for _ in range(3):
+for _rep in range(3):
     for s, _, qs in jobs:
         cached.predict(s, qs)
 print(f"int8+cached: 3x{len(jobs)} jobs in {time.perf_counter() - t:.2f}s {cached.cache_stats}")
