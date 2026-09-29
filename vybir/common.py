@@ -35,10 +35,10 @@ def render_options(q: Dict) -> List[str]:
         # only None/"" mean "no description"; 0 and False are legitimate criterion values
         return [
             k if v is None or v == "" else "%s: %s" % (k, render_criterion(v))
-            for k, v in crit.items()
+            for k, v in (crit or {}).items()
         ]
     if t == "score":
-        return ["level %d: %s" % (i, render_criterion(c)) for i, c in enumerate(crit)]
+        return ["level %d: %s" % (i, render_criterion(c)) for i, c in enumerate(crit or [])]
     crit = crit or {}
     false_crit, true_crit = crit.get("false"), crit.get("true")
     return [

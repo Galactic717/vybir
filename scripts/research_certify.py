@@ -189,7 +189,7 @@ def tfidf_probs(texts, y, train, others):
     return [model.predict_proba(vec.transform([texts[i] for i in idx])) for idx in others]
 
 
-_TASK_DATA = {}
+_TASK_DATA: dict = {}
 
 
 def _task_data(name):

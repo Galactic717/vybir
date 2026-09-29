@@ -260,7 +260,7 @@ class DecisionModelTorch(nn.Module):
             # Features are float32; cast to the head's dtype like laya-mlx does, so
             # float16/bfloat16 weights (CUDA) do not hit a Float-vs-Half matmul error.
             pooled = torch.cat([h[:, 0].float(), feats], -1)
-            act_logits = self.act_head(pooled.to(self.act_head[0].weight.dtype))
+            act_logits = self.act_head(pooled.to(next(self.act_head.parameters()).dtype))
         if return_hidden:
             return logits, act_logits.float(), m.float(), h[:, 0].float()
         return logits, act_logits.float()
